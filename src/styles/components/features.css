@@ -1,0 +1,76 @@
+/* Features */
+.dds-why-safe {
+  background: var(--color-background);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dds-why-safe-section-title {
+  margin: 0;
+  color: #000;
+  font-family: var(--font-primary);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.2308;
+  letter-spacing: -1.25px;
+}
+
+.dds-why-safe-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.dds-why-safe-point {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dds-why-safe-image {
+  display: block;
+  width: 100%;
+  height: 432px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dds-why-safe-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dds-why-safe-point-text {
+  box-sizing: border-box;
+  align-items: flex-start;
+  height: 100px;
+  gap: 4px;
+  padding: 0;
+}
+
+.dds-why-safe-point-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3334;
+  letter-spacing: -1px;
+}
+
+.dds-why-safe-point-desc {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary, #5a5b62);
+}

@@ -1,0 +1,227 @@
+/* Планшетные стили (768-1023px) */
+@media (max-width: 1023px) {
+  #header .dds-main-bar {
+    grid-template-columns: 1fr auto;
+    padding: 16px 20px;
+  }
+  
+  #header .dds-main-nav {
+    display: none;
+  }
+  
+  #header .dds-main-demo {
+    display: none;
+  }
+  
+  #header .dds-main-burger {
+    display: flex;
+  }
+  
+  #header .dds-main-menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: auto;
+    width: max-content;
+    min-width: 200px;
+    z-index: 50;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  #header .dds-main-toggle:checked ~ .dds-main-menu {
+    display: flex;
+  }
+  
+  #header .dds-main-menu-link {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background var(--dds-dur-fast) ease;
+  }
+  
+  #header .dds-main-menu-link:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  
+  #header .dds-main-menu .dds-btn {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .dds-app-preview-title {
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    max-width: none;
+  }
+  
+  .dds-steps-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .dds-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .dds-steps-copy {
+    height: auto;
+    min-height: 0;
+  }
+  
+  .dds-tabs-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .dds-tabs-title {
+    max-width: none;
+    font-size: 52px;
+    letter-spacing: -1px;
+  }
+  
+  .dds-tabs-body {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .dds-tabs-group {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .dds-tabs-group::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .dds-tabs-tab {
+    flex: 0 0 auto;
+  }
+  
+  .dds-tabs-points {
+    display: contents !important;
+  }
+  
+  #uc-tab-1:checked ~ .dds-tabs-inner .dds-tabs-points-set--1,
+  #uc-tab-2:checked ~ .dds-tabs-inner .dds-tabs-points-set--2,
+  #uc-tab-3:checked ~ .dds-tabs-inner .dds-tabs-points-set--3 {
+    display: contents !important;
+  }
+  
+  .dds-tabs-panel {
+    order: 0 !important;
+    width: 100%;
+    aspect-ratio: 16 / 9 !important;
+  }
+  
+  .dds-tabs-card {
+    order: 1 !important;
+    padding: 16px 0;
+  }
+  
+  .dds-tabs-card:first-child {
+    padding-top: 16px;
+  }
+  
+  .dds-tabs-card--active {
+    order: 1 !important;
+    padding-top: 0;
+  }
+  
+  .dds-benefit-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .dds-benefit-title {
+    flex: 0 0 auto;
+    font-size: 52px;
+    letter-spacing: -1.25px;
+  }
+  
+  .dds-benefit-subtitle {
+    width: auto;
+    font-size: 16px;
+  }
+  
+  .dds-why-safe-section-title {
+    font-size: 52px;
+    letter-spacing: -1.25px;
+  }
+  
+  .dds-why-safe-points {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .dds-why-safe-image {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .dds-rmap-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .dds-rmap-title {
+    font-size: 52px;
+    letter-spacing: -1px;
+  }
+  
+  .dds-accordion-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .dds-accordion-title {
+    font-size: 52px;
+    letter-spacing: -1px;
+  }
+  
+  .dds-accordion-subtitle {
+    text-align: left;
+    max-width: none;
+  }
+  
+  .dds-accordion-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+    row-gap: 20px;
+  }
+  
+  .dds-accordion-col {
+    row-gap: 20px;
+  }
+  
+  .dds-footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .dds-footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}

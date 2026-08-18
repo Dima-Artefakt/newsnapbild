@@ -1,0 +1,195 @@
+/* Logos */
+#logos.dds-marquee {
+  background: var(--color-background);
+  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.dds-marquee-eyebrow {
+  margin: 0;
+  padding: 0 40px;
+  text-align: center;
+  color: var(--text-tertiary, rgba(0, 0, 0, 0.6));
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+}
+
+.dds-marquee-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 107px;
+  padding: 0 40px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dds-marquee-track::-webkit-scrollbar {
+  display: none;
+}
+
+.dds-marquee-item {
+  flex: 0 0 auto;
+  height: 37px;
+  color: var(--text-primary);
+  --fill-0: #1c1c1f;
+  display: flex;
+  align-items: center;
+}
+
+.dds-marquee-item img {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Разные размеры */
+.dds-marquee-item-3 img { width: calc(100.85 / 37 * 37px); }
+.dds-marquee-item-4 img { width: calc(43.44 / 37 * 37px); }
+.dds-marquee-item-7 img { width: calc(102.19 / 37 * 37px); }
+.dds-marquee-item-8 img { width: calc(113.58 / 37 * 37px); }
+.dds-marquee-item-9 img { width: calc(98.22 / 37 * 37px); }
+.dds-marquee-item-10 img { width: calc(106.09 / 37 * 37px); }
+
+/* Мобильная бегущая строка - ТОЧНО КАК В ОРИГИНАЛЕ */
+@media (max-width: 1023px) {
+  .dds-marquee {
+    overflow: hidden;
+  }
+
+  .dds-marquee-item {
+    --h: calc(37 / 8.1 * 1vw);
+    margin: 0;
+    order: 0;
+    height: var(--h);
+  }
+  
+  .dds-marquee-item img {
+    height: 100%;
+    width: auto;
+  }
+
+  .dds-marquee-item:nth-child(n+5) {
+    display: flex;
+  }
+
+  .dds-marquee-content,
+  .dds-marquee-content[aria-hidden="true"] {
+    display: flex;
+    align-items: flex-end;
+    flex: 0 0 auto;
+    gap: var(--dds-marquee-gap);
+  }
+
+  .dds-marquee-track {
+    --dds-marquee-gap: calc(48 / 8.1 * 1vw);
+    --dds-marquee-half-gap: calc(24 / 8.1 * 1vw);
+    --dds-marquee-loop-offset: calc(-50% - var(--dds-marquee-half-gap));
+    align-self: flex-start;
+    gap: var(--dds-marquee-gap);
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    max-width: none;
+    justify-content: flex-start;
+    animation: dds-marquee-scroll var(--dds-marquee-duration) linear infinite;
+  }
+
+  .dds-marquee-track {
+    --dds-marquee-duration: 15.5s;
+    animation-duration: 15.5s;
+    animation-play-state: paused;
+  }
+
+  .dds-marquee.is-visible .dds-marquee-track[data-marquee-built] {
+    animation-play-state: running;
+  }
+}
+
+@media (max-width: 767px) {
+  .dds-marquee-item {
+    --h: calc(28 / 3.75 * 1vw);
+    margin: 0 calc(20 / 3.75 * 1vw);
+  }
+
+  .dds-marquee-track {
+    --dds-marquee-gap: calc(40 / 3.75 * 1vw);
+    --dds-marquee-half-gap: calc(20 / 3.75 * 1vw);
+    --dds-marquee-loop-offset: calc(-50% - var(--dds-marquee-half-gap));
+    --dds-marquee-duration: 12.1s;
+    animation-duration: 12.1s;
+  }
+
+  .dds-marquee-item-10 img {
+    width: calc(100 / 3.75 * 1vw);
+    height: auto;
+  }
+}
+
+@keyframes dds-marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--dds-marquee-loop-offset, -50%), 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dds-marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Анимация появления логотипов */
+@media (min-width: 768px) {
+  #logos .dds-marquee-item {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  #logos.is-logos-revealed .dds-marquee-item {
+    animation: logo-reveal 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--logo-index, 0) * 90ms);
+  }
+}
+
+@keyframes logo-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+  #logos {
+    overflow: hidden;
+  }
+
+  #logos .dds-marquee-track {
+    align-self: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    overflow: hidden;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  #logos .dds-marquee-content {
+    display: contents;
+  }
+
+  #logos .dds-marquee-content[aria-hidden="true"] {
+    display: none;
+  }
+
+  #logos .dds-marquee-item {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

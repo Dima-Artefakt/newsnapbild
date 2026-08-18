@@ -1,0 +1,95 @@
+/* CTA */
+.dds-launch[data-cms-section="cta.launch"] {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #ffffff;
+  background-image: linear-gradient(157deg, #ffffff 11%, #ffcdb3 33%, #ffa4b6 53%, #ffb2e9 67%, #d4d6ff 90%, #d4d6ff 97%, #ffffff 100%);
+  color: #000000;
+  font-family: var(--font-primary);
+  padding: 128px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dds-launch-dust {
+  display: none;
+}
+
+.dds-launch-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.dds-launch-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dds-launch-title {
+  margin: 0;
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.23;
+  letter-spacing: -0.5px;
+}
+
+.dds-launch-title-responsive {
+  display: none;
+}
+
+.dds-launch-title-desktop {
+  display: inline;
+}
+
+.dds-launch-subtitle {
+  display: none;
+  margin: 0;
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dds-launch-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dds-launch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.428;
+  cursor: pointer;
+  border: none;
+}
+
+.dds-launch-btn-text {
+  background: linear-gradient(90deg, #ff6d3c, #ff6ba7 46%, #bb6dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

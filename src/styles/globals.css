@@ -1,0 +1,24 @@
+/* Главный файл стилей — импортирует все остальные */
+
+/* Базовые */
+@import './fonts.css';
+@import './variables.css';
+@import './reset.css';
+
+/* Компоненты */
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/logos.css';
+@import './components/process.css';
+@import './components/use-cases.css';
+@import './components/compare.css';
+@import './components/features.css';
+@import './components/roadmap.css';
+@import './components/faq.css';
+@import './components/cta.css';
+@import './components/footer.css';
+@import './components/animations.css';
+
+/* Адаптивность */
+@import './responsive/tablet.css';
+@import './responsive/mobile.css';
