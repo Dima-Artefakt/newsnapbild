@@ -1,0 +1,93 @@
+/* Process */
+.dds-steps {
+  background: var(--color-background);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  padding: 96px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dds-steps-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dds-steps-title {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: calc(52 / 14.4 * 1vw);
+  line-height: 1.2308;
+  letter-spacing: -1px;
+}
+
+.dds-steps-subtitle {
+  margin: 0;
+  color: var(--text-secondary, #5a5b62);
+  font-size: calc(16 / 14.4 * 1vw);
+  line-height: 1.5;
+}
+
+.dds-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.dds-steps-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dds-steps-media {
+  display: block;
+  width: 100%;
+  height: 432px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: var(--foreground-primary, #fff);
+}
+
+.dds-steps-overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.dds-steps-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0 0;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.dds-steps-name {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 24px;
+  line-height: 1.3334;
+  letter-spacing: -1px;
+}
+
+.dds-steps-desc {
+  margin: 0;
+  color: var(--text-secondary, #5a5b62);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dds-steps-wide { display: inline; }
+.dds-steps-narrow { display: none; }

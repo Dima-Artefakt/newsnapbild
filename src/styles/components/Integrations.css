@@ -1,0 +1,233 @@
+.dds-integrations {
+  background: var(--color-background);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dds-integrations-section-title {
+  margin: 0;
+  color: #000;
+  font-family: var(--font-primary);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.2308;
+  letter-spacing: -1.25px;
+}
+
+.dds-integrations-subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary, #5a5b62);
+  max-width: 600px;
+}
+
+.dds-integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.dds-integrations-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: default;
+  background: transparent;
+}
+
+.dds-integrations-card:hover {
+  border-color: #000;
+  background: rgba(0, 0, 0, 0.02);
+  transform: translateY(-2px);
+}
+
+.dds-integrations-card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dds-integrations-card-icon {
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dds-integrations-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  color: #000;
+}
+
+.dds-integrations-card-description {
+  font-size: 12px;
+  color: var(--text-secondary, #5a5b62);
+  margin: 0;
+  font-weight: 500;
+}
+
+.dds-integrations-card-status {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.dds-integrations-card:hover .dds-integrations-card-status {
+  opacity: 1;
+}
+
+.dds-integrations-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dds-integrations-bottom-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary, #5a5b62);
+}
+
+.dds-integrations-link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.dds-integrations-link:hover {
+  text-decoration: none;
+}
+
+.dds-integrations-bottom-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dds-integrations-tag {
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary, #5a5b62);
+  transition: all 0.3s;
+}
+
+.dds-integrations-tag:hover {
+  border-color: #000;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .dds-integrations {
+    padding: 32px 24px;
+  }
+
+  .dds-integrations-section-title {
+    font-size: 40px;
+  }
+
+  .dds-integrations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dds-integrations {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .dds-integrations-section-title {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .dds-integrations-subtitle {
+    font-size: 14px;
+  }
+
+  .dds-integrations-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dds-integrations-card {
+    padding: 10px 12px;
+  }
+
+  .dds-integrations-card-icon {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .dds-integrations-card-name {
+    font-size: 13px;
+  }
+
+  .dds-integrations-card-description {
+    font-size: 11px;
+  }
+
+  .dds-integrations-bottom {
+    padding-top: 20px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dds-integrations {
+    padding: 20px 12px;
+    gap: 16px;
+  }
+
+  .dds-integrations-section-title {
+    font-size: 26px;
+  }
+
+  .dds-integrations-subtitle {
+    font-size: 13px;
+  }
+
+  .dds-integrations-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .dds-integrations-card {
+    padding: 10px 12px;
+  }
+
+  .dds-integrations-bottom-tags {
+    gap: 6px;
+  }
+
+  .dds-integrations-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+}

@@ -1,0 +1,44 @@
+/* CSS переменные */
+:root {
+  /* Цвета */
+  --background-primary: #F2F2F4;
+  --background-secondary: #FFFFFF;
+  --foreground-primary: #FFFFFF;
+  --foreground-secondary: #FAFAFA;
+  --foreground-tertiary: #F5F5F7;
+  --foreground-contrast: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: #5A5B62;
+  --text-tertiary: rgba(0, 0, 0, 0.6);
+  --text-contrast: #FFFFFF;
+  --icon-primary: #000000;
+  --icon-contrast: #FFFFFF;
+  --stroke-primary: rgba(0, 0, 0, 0.05);
+  --stroke-secondary: rgba(0, 0, 0, 0.4);
+  --stroke-tertiary: rgba(0, 0, 0, 0.1);
+  --surface-glass-strong: rgba(0, 0, 0, 0.03);
+  
+  /* Типографика */
+  --color-background: #f2f2f4;
+  --font-primary: "TT Commons Pro", sans-serif;
+  --font-secondary: "TT Commons Pro", sans-serif;
+  
+  /* Радиусы */
+  --card-radius: 24px;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Отступы */
+  --spacing: 0.25rem;
+  --container-7xl: 80rem;
+  --breakpoint-xl: 1440px;
+  
+  /* Анимации */
+  --dds-dur-fast: 0.2s;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Roadmap */
+  --dds-rmap-col: 320px;
+  --dds-rmap-pad: 40px;
+}

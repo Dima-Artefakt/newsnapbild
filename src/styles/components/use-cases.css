@@ -1,0 +1,334 @@
+/* Use Cases */
+.dds-tabs {
+  background: var(--color-background);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  padding: 96px 40px;
+}
+
+.dds-tabs-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dds-tabs-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dds-tabs-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.dds-tabs-title {
+  margin: 0;
+  white-space: pre-wrap;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 52px;
+  line-height: 1.2308;
+  letter-spacing: -1px;
+}
+
+.dds-tabs-narrow { display: none; }
+.dds-tabs-wide { display: inline; }
+
+.dds-tabs-group {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.dds-tabs-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--foreground-tertiary, #f5f5f7);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--dds-dur-fast) ease, color var(--dds-dur-fast) ease;
+}
+
+.dds-tabs-tab--active {
+  background: var(--text-primary);
+  color: var(--text-contrast, #fff);
+}
+
+.dds-tabs-body {
+  display: grid;
+  grid-template-columns: 432px minmax(0, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.dds-tabs-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.dds-tabs-points-set {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dds-tabs-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  min-height: 0;
+  padding: 20px 0;
+  border-bottom: 0;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.dds-tabs-card:first-child {
+  padding-top: 0;
+}
+
+.dds-tabs-card-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
+}
+
+.dds-tabs-card--active .dds-tabs-card-title {
+  color: #000;
+}
+
+.dds-tabs-card-desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin: 0;
+  opacity: 0;
+  font-size: 14px;
+  line-height: 1.4286;
+  color: var(--text-secondary, #5a5b62);
+  transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.dds-tabs-card-desc > span {
+  display: block;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.dds-tabs-card--active .dds-tabs-card-desc {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.dds-tabs-card-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dds-tabs-card-progress-fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, #ffcdb3 0%, #ffa4b6 38%, #ffb2e9 68%, #d4d6ff 100%);
+}
+
+.dds-tabs-panel {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #0d0d0d;
+}
+
+.dds-tabs-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.dds-tabs-media--active {
+  opacity: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dds-tabs {
+    padding: 60px 20px;
+  }
+
+  .dds-tabs-inner {
+    gap: 40px;
+  }
+
+  .dds-tabs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dds-tabs-title {
+    font-size: 44px;
+    max-width: 100%;
+  }
+
+  .dds-tabs-tab {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  .dds-tabs-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .dds-tabs-panel {
+    order: -1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .dds-tabs-points-set {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .dds-tabs-points-set--active {
+    display: grid;
+  }
+
+  .dds-tabs-card {
+    min-height: 200px;
+    padding: 20px;
+    padding-right: 60px;
+  }
+
+  .dds-tabs-card-title {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .dds-tabs-card-desc {
+    font-size: 14px;
+  }
+}
+
+/* ===== МОБИЛЬНЫЕ ===== */
+@media (max-width: 767px) {
+  .dds-tabs {
+    padding: 48px 16px;
+  }
+
+  .dds-tabs-inner {
+    gap: 32px;
+  }
+
+  .dds-tabs-header {
+    gap: 12px;
+  }
+
+  .dds-tabs-title {
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+  }
+
+  .dds-tabs-wide {
+    display: none;
+  }
+
+  .dds-tabs-narrow {
+    display: inline;
+  }
+
+  .dds-tabs-group {
+    gap: 2px;
+    width: calc(100% + 32px);
+    max-width: none;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dds-tabs-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dds-tabs-tab {
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    font-size: 13px !important;
+  }
+
+  .dds-tabs-body {
+    gap: 10px;
+  }
+
+  .dds-tabs-panel {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 6px !important;
+  }
+
+  .dds-tabs-points-set {
+    display: none !important;
+  }
+
+  .dds-tabs-points-set--active {
+    display: flex !important;
+  }
+
+  .dds-tabs-card {
+    min-height: 0;
+    padding: 12px 0;
+  }
+
+  .dds-tabs-card:first-child {
+    padding-top: 12px;
+  }
+
+  .dds-tabs-card-title {
+    font-size: 16px !important;
+    line-height: 1.375;
+    letter-spacing: 0;
+  }
+
+  .dds-tabs-card-desc {
+    font-size: 14px !important;
+    line-height: 1.428;
+  }
+}
