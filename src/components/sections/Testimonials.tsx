@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import '../../styles/components/testimonials.css'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -240,7 +242,7 @@ export const Testimonials = () => {
               </blockquote>
               <div className="dds-testimonials-card-author">
                 {item.avatar && (
-                  <img
+                  <Image 
                     src={item.avatar}
                     alt={item.name}
                     className="dds-testimonials-card-avatar"

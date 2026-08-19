@@ -1,13 +1,21 @@
 import type { NextConfig } from "next";
 
-const nextConfig = {
-  output: 'export',
+const isProd = process.env.NODE_ENV === 'production'
+const repoName = 'newsnapbild'
+
+const nextConfig: NextConfig = {
+  // output: 'export',
   images: {
     unoptimized: true,
   },
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}` : '',
   trailingSlash: true,
+  reactStrictMode: true,
+  skipTrailingSlashRedirect: true,
+  experimental: {
+    optimizeCss: false,
+  },
 }
 
-module.exports = nextConfig
-
-export default nextConfig;
+export default nextConfig

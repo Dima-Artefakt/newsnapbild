@@ -1,3 +1,5 @@
+import '../../styles/components/cta.css'
+
 export const CTA = () => (
   <section id="cta" className="dds-launch dds-reveal" data-cms-section="cta.launch">
     <div className="dds-launch-content">

@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import '../../styles/components/logos.css'
+import Image from 'next/image'
 
 const logos = [
   { id: 3, src: '/ozon.svg' },
@@ -94,14 +96,14 @@ export const Logos = () => {
         <div className="dds-marquee-content">
           {logos.map((logo) => (
             <div key={logo.id} className={`dds-marquee-item dds-marquee-item-${logo.id}`}>
-              <img src={logo.src} alt="" />
+              <Image  src={logo.src} alt="" />
             </div>
           ))}
         </div>
         <div className="dds-marquee-content" aria-hidden="true">
           {logos.map((logo) => (
             <div key={logo.id} className={`dds-marquee-item dds-marquee-item-${logo.id}`}>
-              <img src={logo.src} alt="" />
+              <Image  src={logo.src} alt="" />
             </div>
           ))}
         </div>

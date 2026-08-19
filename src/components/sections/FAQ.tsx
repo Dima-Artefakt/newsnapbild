@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import '../../styles/components/faq.css'
+import Image from 'next/image'
 
 const faqData = [
   {
@@ -77,7 +79,7 @@ export const FAQ = () => {
               <label className="dds-accordion-head" htmlFor={`dds-faq-${item.id}`}>
                 <p className="dds-accordion-question">{item.q}</p>
                 <span className="dds-accordion-icon">
-                  <img src="/plus-icon.webp" alt="+" width="24" height="24" />
+                  <Image  src="/plus-icon.webp" alt="+" width="24" height="24" />
                 </span>
               </label>
               <div className="dds-accordion-panel">
@@ -101,7 +103,7 @@ export const FAQ = () => {
               <label className="dds-accordion-head" htmlFor={`dds-faq-${item.id}`}>
                 <p className="dds-accordion-question">{item.q}</p>
                 <span className="dds-accordion-icon">
-                  <img src="/plus-icon.webp" alt="+" width="24" height="24" />
+                  <Image  src="/plus-icon.webp" alt="+" width="24" height="24" />
                 </span>
               </label>
               <div className="dds-accordion-panel">

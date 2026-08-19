@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import '../../styles/components/roadmap.css'
 
 const roadmapItems = [
   { title: 'Сайты за 5 минут', date: 'Декабрь, 2025', desc: 'Генерация корпоративных сайтов по вашей дизайн-системе — 100% консистентность, без разработчиков' },

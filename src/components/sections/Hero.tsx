@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
+import '../../styles/components/hero.css'
+import Image from 'next/image'
 
 export const Hero = () => {
   useEffect(() => {
@@ -59,7 +61,7 @@ export const Hero = () => {
             </a>
           </div>
           <div className="dds-app-preview-media">
-            <img 
+            <Image  
               className="dds-app-preview-shot" 
               src="/hero-snapbuild.webp" 
               alt="Снэпбилд интерфейс" 

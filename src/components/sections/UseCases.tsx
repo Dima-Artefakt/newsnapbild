@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import '../../styles/components/use-cases.css'
+import Image from 'next/image'
 
 const tabs = ['Сайты', 'Изображения', 'Видео', 'Баннеры', 'Презентации']
 
@@ -247,7 +249,7 @@ export const UseCases = () => {
               const imagePath = `/use-cases-${filePrefix}-item${i + 1}.webp`
               
               return (
-                <img
+                <Image 
                   key={i}
                   className={`dds-tabs-media dds-tabs-media--${filePrefix}-item${i + 1} ${isActive ? 'dds-tabs-media--active' : ''}`}
                   src={imagePath}

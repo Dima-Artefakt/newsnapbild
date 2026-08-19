@@ -1,5 +1,7 @@
 'use client'
 
+import '../../styles/components/Integrations.css'
+
 const integrations = [
   {
     id: 1,

@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 export const Footer = () => (
   <footer className="dds-footer">
     <div className="dds-footer-top">
       <div className="dds-footer-brand">
         <a className="dds-footer-logo" href="/" aria-label="Снэпбилд">
-          <img src="/logo.svg" alt="Снэпбилд" width="153" height="22" />
+          <Image src="/logo.svg" alt="Снэпбилд" width="153" height="22" />
         </a>
         <p className="dds-footer-tagline">
           Платформа, где все создается в рамках вашего бренда и дизайн-системы

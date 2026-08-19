@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import '../../styles/components/сontact.css'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 
