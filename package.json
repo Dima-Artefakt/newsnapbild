@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "clean": "rimraf out .next",
+    "deploy": "npm run build && echo > out\\.nojekyll",
+    "deploy:github": "npm run clean && npm run build && echo > out\\.nojekyll && echo ✅ Готово!"
   },
   "dependencies": {
     "lightningcss": "^1.33.0",
@@ -22,6 +25,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "rimraf": "^6.1.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
