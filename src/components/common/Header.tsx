@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
+import '../../styles/components/header.css'
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -118,7 +119,12 @@ export const Header = () => {
       />
       <div className="dds-main-bar">
         <a className="dds-main-logo" href="/" aria-label="Снэпбилд">
-          <Image  src="/logo.svg" alt="Снэпбилд" width="153" height="22" />
+          <AppImage
+            src="/logo.svg"
+            alt="Снэпбилд"
+            width={153}
+            height={22}
+          />
         </a>
         <nav className="dds-main-nav" aria-label="Основная навигация">
           <a className="dds-main-link" href="#process"><span>Продукт</span></a>

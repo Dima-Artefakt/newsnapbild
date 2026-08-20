@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import '../../styles/components/faq.css'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
 
 const faqData = [
   {
@@ -79,7 +79,12 @@ export const FAQ = () => {
               <label className="dds-accordion-head" htmlFor={`dds-faq-${item.id}`}>
                 <p className="dds-accordion-question">{item.q}</p>
                 <span className="dds-accordion-icon">
-                  <Image  src="/plus-icon.webp" alt="+" width="24" height="24" />
+                  <AppImage
+                    src="/plus-icon.webp"
+                    alt="+"
+                    width={24}
+                    height={24}
+                  />
                 </span>
               </label>
               <div className="dds-accordion-panel">
@@ -103,7 +108,12 @@ export const FAQ = () => {
               <label className="dds-accordion-head" htmlFor={`dds-faq-${item.id}`}>
                 <p className="dds-accordion-question">{item.q}</p>
                 <span className="dds-accordion-icon">
-                  <Image  src="/plus-icon.webp" alt="+" width="24" height="24" />
+                  <AppImage
+                    src="/plus-icon.webp"
+                    alt="+"
+                    width={24}
+                    height={24}
+                  />
                 </span>
               </label>
               <div className="dds-accordion-panel">

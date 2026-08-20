@@ -12,7 +12,7 @@ const testimonials = [
     company: 'OZON',
     text: 'Снэпбилд позволил нам сократить время создания маркетинговых материалов с недель до часов. Теперь любые изменения в дизайне применяются автоматически ко всем материалам.',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonials = [
     company: 'Avito',
     text: 'Мы подключили дизайн-систему к Снэпбилду и теперь вся команда создаёт контент в едином стиле. Никаких больше расхождений и ручных правок.',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const testimonials = [
     company: 'Циан',
     text: 'Интеграция с нашей дизайн-системой прошла за один день. Теперь баннеры, презентации и видео генерируются автоматически в нужных форматах.',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const testimonials = [
     company: 'Лента',
     text: 'Снэпбилд — это не просто инструмент, это платформа, которая изменила наш подход к созданию контента. Результаты превосходят ожидания.',
     rating: 4,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const testimonials = [
     company: 'BrandLab',
     text: 'Снэпбилд изменил наш workflow. Теперь мы создаём материалы в 10 раз быстрее, сохраняя полный контроль над брендом.',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const testimonials = [
     company: 'OZON',
     text: 'Очень удобный инструмент для создания контента в едином стиле. Экономит кучу времени!',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const testimonials = [
     company: 'OZON',
     text: 'Очень удобный инструмент для создания контента в едином стиле. Экономит кучу времени!',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ const testimonials = [
     company: 'OZON',
     text: 'Очень удобный инструмент для создания контента в едином стиле. Экономит кучу времени!',
     rating: 5,
-    avatar: 'placeholder-avatar.svg',
+    avatar: '/placeholder-avatar.svg',
   },
 ]
 

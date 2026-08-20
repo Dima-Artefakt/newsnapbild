@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import '../../styles/components/compare.css'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
 
 const compareData = {
   headers: ['Особенности', 'снэпбилд', 'Claude + Figma MCP', 'No-code платформы', 'Cursor', 'Традиционный'],
@@ -77,7 +77,12 @@ export const Compare = () => {
                 <div key={vi} className="sds-compare-cell">
                   {val.includes('✅') ? (
                     <span className="sds-check">
-                      <Image  src="/check.svg" alt="✓" width="24" height="24" />
+                      <AppImage
+                        src="/check.svg"
+                        alt="✓"
+                        width={24}
+                        height={24}
+                      />
                     </span>
                   ) : val.includes('—') ? (
                     <span>—</span>

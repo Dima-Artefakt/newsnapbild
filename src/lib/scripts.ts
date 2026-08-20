@@ -1,5 +1,7 @@
 // src/lib/scripts.ts
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const loadScript = (src: string, async = true): Promise<void> => {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
@@ -12,11 +14,11 @@ export const loadScript = (src: string, async = true): Promise<void> => {
 }
 
 export const loadPhonoTag = () => {
-  return loadScript('/js/tag_phono.js', true)
+  return loadScript(`${basePath}/js/tag_phono.js`, true);
 }
 
 export const loadTag = () => {
-  return loadScript('/js/tag.js', true)
+  return loadScript(`${basePath}/js/tag.js`, true)
 }
 
 export const loadAllScripts = () => {
