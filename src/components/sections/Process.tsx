@@ -1,7 +1,7 @@
 'use client'
 
 import '../../styles/components/process.css'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
 
 const steps = [
   {
@@ -36,7 +36,11 @@ export const Process = () => (
     <div className="dds-steps-grid">
       {steps.map((step, i) => (
         <article key={i} className="dds-steps-card">
-          <Image  src={step.image} className="dds-steps-media" alt={step.name} />
+          <AppImage  
+            className="dds-steps-media"
+            src={step.image} 
+            alt={step.name}
+          />
           <div className="dds-steps-overlay">
             <div className="dds-steps-copy">
               <h3 className="dds-steps-name">{step.name}</h3>

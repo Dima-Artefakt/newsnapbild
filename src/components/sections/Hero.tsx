@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import '../../styles/components/hero.css'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
 
 export const Hero = () => {
   useEffect(() => {
@@ -61,8 +61,8 @@ export const Hero = () => {
             </a>
           </div>
           <div className="dds-app-preview-media">
-            <Image  
-              className="dds-app-preview-shot" 
+            <AppImage  
+              className="dds-app-preview-shot"
               src="/hero-snapbuild.webp" 
               alt="Снэпбилд интерфейс" 
             />

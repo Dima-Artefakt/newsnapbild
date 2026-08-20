@@ -1,5 +1,5 @@
 import '../../styles/components/features.css'
-import Image from 'next/image'
+import { AppImage } from '@/src/components/AppImage'
 
 export const Features = () => (
   <section id="features" className="dds-why-safe dds-reveal">
@@ -7,7 +7,10 @@ export const Features = () => (
     <div className="dds-why-safe-points">
       <div className="dds-why-safe-point">
         <picture className="dds-why-safe-image">
-          <Image  src="/security-approved-models.webp" alt="Только одобренные модели" />
+          <AppImage  
+            src="/security-approved-models.webp"
+            alt="Только одобренные модели"
+          />
         </picture>
         <div className="dds-why-safe-point-text">
           <h3 className="dds-why-safe-point-title">Только одобренные модели</h3>
@@ -16,7 +19,10 @@ export const Features = () => (
       </div>
       <div className="dds-why-safe-point">
         <picture className="dds-why-safe-image">
-          <Image  src="/security-private-cloud.webp" alt="Ваш контур, ваша юрисдикция" />
+          <AppImage  
+            src="/security-private-cloud.webp" 
+            alt="Ваш контур, ваша юрисдикция"
+          />
         </picture>
         <div className="dds-why-safe-point-text">
           <h3 className="dds-why-safe-point-title">Ваш контур, ваша юрисдикция</h3>
@@ -25,7 +31,10 @@ export const Features = () => (
       </div>
       <div className="dds-why-safe-point">
         <picture className="dds-why-safe-image">
-          <Image  src="/security-ai-stack.webp" alt="Собственный AI-стек" />
+          <AppImage  
+            src="/security-ai-stack.webp"
+            alt="Собственный AI-стек"
+          />
         </picture>
         <div className="dds-why-safe-point-text">
           <h3 className="dds-why-safe-point-title">Собственный AI-стек</h3>

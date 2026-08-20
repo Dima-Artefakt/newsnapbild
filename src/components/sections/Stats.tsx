@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import '../../styles/components/Stats.css'
+import '../../styles/components/stats.css'
 
 const stats = [
   {
