@@ -193,3 +193,65 @@
 .dds-main-menu {
   display: none;
 }
+
+@media (max-width: 480px) {
+  #header .dds-main-bar {
+    grid-template-columns: 1fr auto;
+    padding: 16px 20px;
+  }
+  
+  #header .dds-main-nav {
+    display: none;
+  }
+  
+  #header .dds-main-demo {
+    display: none;
+  }
+  
+  #header .dds-main-burger {
+    display: flex;
+  }
+  
+  #header .dds-main-menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: auto;
+    width: max-content;
+    min-width: 200px;
+    z-index: 50;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  #header .dds-main-toggle:checked ~ .dds-main-menu {
+    display: flex;
+  }
+  
+  #header .dds-main-menu-link {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background var(--dds-dur-fast) ease;
+  }
+  
+  #header .dds-main-menu-link:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  
+  #header .dds-main-menu .dds-btn {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+}

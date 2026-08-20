@@ -1,7 +1,7 @@
-// src/app/layout.tsx
+// app/layout.tsx
 import type { Metadata } from 'next'
 import { Scripts } from '@/src/components/common/Scripts'
-import '../src/styles/globals.css'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Снэпбилд — платформа для создания маркетинговых материалов',
