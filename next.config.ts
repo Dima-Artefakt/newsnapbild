@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const repoName = 'newsnapbild'
 
 const nextConfig: NextConfig = {
-  // output: 'export',
+  output: 'export',
   images: {
     unoptimized: true,
   },

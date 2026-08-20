@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## описание выполненной работы
 
-First, run the development server:
+Выполнена адаптация и доработка лендинга для продукта **Снэпбилд** — платформы для создания маркетинговых материалов в едином фирменном стиле. Работа включала:
+
+- Анализ существующей стилистики и структуры
+- Создание пяти новых секций
+- Настройка сборки для GitHub Pages
+
+## 2. Ссылка на опубликованную страницу
+
+**[https://dima-artefakt.github.io/newsnapbild/](https://dima-artefakt.github.io/newsnapbild/)**
+
+## 3. Инструкция по локальному запуску
+
+### Требования
+- Node.js 20+
+- npm
+
+### Установка и запуск
 
 ```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/Dima-Artefakt/newsnapbild.git
+cd newsnapbild
+
+# 2. Установить зависимости
+npm install
+
+# 3. Запустить в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 4. Открыть в браузере
+http://localhost:3000
+
+# Сборка для продакшена
+# Очистка и сборка
+npm run clean
+npm run build
+
+# Запуск локального сервера для проверки
+npx serve out
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Использованный стек
+Next.js 16.3.1	
+React 19	
+TypeScript	
+CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Перечень пяти добавленных секций
+Статистика и достижения (Снэпбилд в цифрах)
+Интеграции (Работает с вашими любимыми инструментами)
+Тарифы (Выберите подходящий тариф)
+Отзывы (Что говорят клиенты)
+Форма обратной связи (Остались вопросы? Мы ответим)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+# Методология анализа
 
-To learn more about Next.js, take a look at the following resources:
+Визуальный анализ
+Изучена цветовая схема: основной фон, акцентные цвета
+    Типографика: 
+        TT Commons Pro, размеры заголовков, подзаголовков, Отступы
+    Компонентный анализ:
+        Изучена структура существующих секций; Выявлен минималистичный подход; Определен стиль взаимодействия.
+    Адаптивность
+        Проанализированы медиа-запросы на основные разрешения
+        Изучен подход к мобильной навигации
+    Токенизация
+        Выявлены CSS-переменные
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Какие части исходной страницы удалось воспроизвести
+Полностью воспроизведено:
+    Секция Header (навигация, бургер-меню)
+    Секция Hero (главный блок с заголовком, описанием и CTA)
+    Секция Logos (бегущая строка с логотипами партнеров)
+    Секция Process (три шага с изображениями)
+    Секция UseCases (табы: сайты, изображения, видео, баннеры, презентации)
+    Секция Compare (сравнение с конкурентами)
+    Секция Features (безопасность без компромиссов)
+    Секция Roadmap (роадмап с датами)
+    Секция FAQ (аккордеон с вопросами)
+    Секция Testimonials (горизонтальный скролл с отзывами)
+    Секция CTA (призыв к действию)
+    Секция Footer (подвал)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Что не удалось реализовать и почему
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Drag-to-scroll на мобильных:       Работает, но может конфликтовать с нативным скроллом на некоторых устройствах
+Автопрокрутка карусели:	           Не реализована из-за потенциального конфликта с drag-to-scroll
+SSR для изображений:               Из-за output: 'export' все изображения обрабатываются на клиенте
+Динамические пути для изображений: Проблема с basePath в GitHub Pages решена через компонент-обертку
